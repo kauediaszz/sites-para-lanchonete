@@ -340,7 +340,7 @@ const lanches: Product[] = [
     "Hambúrguer de picanha"
   ),
 
-  // ----- X-Burgers -----
+  // ----- X Prensados -----
   {
     id: "x-picanha",
     name: "X-Picanha",
@@ -348,7 +348,7 @@ const lanches: Product[] = [
     image: IMG.xBurgers,
     emoji: "🍔",
     category: "lanches",
-    section: "X-Burgers",
+    section: "X Prensados",
     variants: single(23),
     addons: burgerAddons,
   },
@@ -359,7 +359,7 @@ const lanches: Product[] = [
     image: IMG.xBurgers,
     emoji: "🍔",
     category: "lanches",
-    section: "X-Burgers",
+    section: "X Prensados",
     variants: single(25),
     addons: burgerAddons,
   },
@@ -370,7 +370,7 @@ const lanches: Product[] = [
     image: IMG.xBurgers,
     emoji: "🍔",
     category: "lanches",
-    section: "X-Burgers",
+    section: "X Prensados",
     variants: single(28),
     addons: burgerAddons,
   },
@@ -382,7 +382,7 @@ const lanches: Product[] = [
     image: IMG.xBurgers,
     emoji: "🦉",
     category: "lanches",
-    section: "X-Burgers",
+    section: "X Prensados",
     variants: single(31),
     addons: burgerAddons,
   },
