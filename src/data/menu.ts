@@ -110,6 +110,21 @@ const IMG = {
   maravilhaPantera: "/menu/mulher-maravilha-e-pantera-negra.webp",
   flashLanterna: "/menu/flash-e-lanterna-verde.webp",
   acai: "/menu/acai.webp",
+  combos1a6: "/menu/combo-1-2-3-4-5-e6.webp",
+  combos7e8: "/menu/combo-7-e-8.webp",
+  comboFamilia: "/menu/combo-familia.webp",
+  comboCoringaMadrugadao: "/menu/combo-coringa-e-madrugadao.webp",
+  prensados: "/menu/sanduiches-prensados-dourados-na-chapa.webp",
+  xBurgers: "/menu/essa-e-para-o-x-picanha-x-picanhacbacon-x-madrugadao-e-x-corujao.webp",
+  aipim: "/menu/aipim.webp",
+  nuggets: "/menu/nuguetts.webp",
+  batata: "/menu/batata.webp",
+  batataMaluca: "/menu/batata-maluca.webp",
+  frangoPassarinho: "/menu/frango-a-passarinho.webp",
+  costelinha: "/menu/costela-suina.webp",
+  caixaPetiscos: "/menu/caixa-de-petiscos.webp",
+  casquinhaPicoleBig: "/menu/casquinha-2-bolas-casquinha-recheada-e-picole-big.webp",
+  picoleFruta: "/menu/picole-de-fruta.webp",
 };
 
 /* ------------------------------------------------------------------ */
@@ -330,7 +345,7 @@ const lanches: Product[] = [
     id: "x-picanha",
     name: "X-Picanha",
     description: "Picanha, cheddar e Catupiry.",
-    image: "",
+    image: IMG.xBurgers,
     emoji: "🍔",
     category: "lanches",
     section: "X-Burgers",
@@ -341,7 +356,7 @@ const lanches: Product[] = [
     id: "x-picanha-bacon",
     name: "X-Picanha com Bacon",
     description: "Picanha, bacon, cheddar e Catupiry.",
-    image: "",
+    image: IMG.xBurgers,
     emoji: "🍔",
     category: "lanches",
     section: "X-Burgers",
@@ -352,7 +367,7 @@ const lanches: Product[] = [
     id: "x-madrugadao",
     name: "X-Madrugadão",
     description: "Frango, bacon, calabresa, picanha, cheddar e Catupiry.",
-    image: "",
+    image: IMG.xBurgers,
     emoji: "🍔",
     category: "lanches",
     section: "X-Burgers",
@@ -364,7 +379,7 @@ const lanches: Product[] = [
     name: "X-Corujão",
     description:
       "Frango, bacon, calabresa, picanha, carne seca, cheddar e Catupiry.",
-    image: "",
+    image: IMG.xBurgers,
     emoji: "🦉",
     category: "lanches",
     section: "X-Burgers",
@@ -382,12 +397,13 @@ const combo = (
   name: string,
   price: number,
   contents: string,
-  section: string
+  section: string,
+  image = ""
 ): Product => ({
   id,
   name,
   description: `${contents} Feitos com cheddar e Catupiry pastoso. Inclui 1 Convenção de 2 litros grátis.`,
-  image: "",
+  image,
   emoji: "🔥",
   category: "combos",
   section,
@@ -395,19 +411,19 @@ const combo = (
 });
 
 const combos: Product[] = [
-  combo("combo-casal-1", "Combo Casal 1", 43, "2 Batman, batata frita, nuggets e molho especial.", "Combo casal"),
-  combo("combo-casal-2", "Combo Casal 2", 57, "2 Demolidores, batata frita, nuggets e molho especial.", "Combo casal"),
-  combo("combo-casal-3", "Combo Casal 3", 45, "2 Mulheres-Maravilha, batata frita, nuggets e molho especial.", "Combo casal"),
-  combo("combo-casal-4", "Combo Casal 4", 50, "2 Panteras Negras, batata frita, nuggets e molho especial.", "Combo casal"),
-  combo("combo-casal-5", "Combo Casal 5", 55, "2 Tempestades, batata frita, nuggets e molho especial.", "Combo casal"),
-  combo("combo-casal-6", "Combo Casal 6", 65, "2 The Flash, batata frita, nuggets e molho especial.", "Combo casal"),
-  combo("combo-casal-7", "Combo Casal 7", 51, "3 Batman, batata frita, nuggets e molho especial.", "Combo casal"),
-  combo("combo-casal-8", "Combo Casal 8", 95, "3 Lanternas Verdes, batata frita, nuggets e molho especial.", "Combo casal"),
+  combo("combo-casal-1", "Combo Casal 1", 43, "2 Batman, batata frita, nuggets e molho especial.", "Combo casal", IMG.combos1a6),
+  combo("combo-casal-2", "Combo Casal 2", 57, "2 Demolidores, batata frita, nuggets e molho especial.", "Combo casal", IMG.combos1a6),
+  combo("combo-casal-3", "Combo Casal 3", 45, "2 Mulheres-Maravilha, batata frita, nuggets e molho especial.", "Combo casal", IMG.combos1a6),
+  combo("combo-casal-4", "Combo Casal 4", 50, "2 Panteras Negras, batata frita, nuggets e molho especial.", "Combo casal", IMG.combos1a6),
+  combo("combo-casal-5", "Combo Casal 5", 55, "2 Tempestades, batata frita, nuggets e molho especial.", "Combo casal", IMG.combos1a6),
+  combo("combo-casal-6", "Combo Casal 6", 65, "2 The Flash, batata frita, nuggets e molho especial.", "Combo casal", IMG.combos1a6),
+  combo("combo-casal-7", "Combo Casal 7", 51, "3 Batman, batata frita, nuggets e molho especial.", "Combo casal", IMG.combos7e8),
+  combo("combo-casal-8", "Combo Casal 8", 95, "3 Lanternas Verdes, batata frita, nuggets e molho especial.", "Combo casal", IMG.combos7e8),
 
-  combo("combo-familia", "Combo Família", 70, "4 X-Tudo, batata frita, nuggets, calabresa e molho especial.", "Combo família"),
+  combo("combo-familia", "Combo Família", 70, "4 X-Tudo, batata frita, nuggets, calabresa e molho especial.", "Combo família", IMG.comboFamilia),
   combo("combo-familhao", "Combo Familhão", 90, "6 X-Tudo, batata frita, nuggets, calabresa e molho especial.", "Combo família"),
-  combo("combo-coringa", "Combo Coringa", 102, "8 X-Tudo, batata frita, nuggets, calabresa e molho especial.", "Combo família"),
-  combo("combo-madrugadao", "Combo Madrugadão", 125, "10 X-Tudo, batata frita, nuggets, calabresa e frango à passarinho.", "Combo família"),
+  combo("combo-coringa", "Combo Coringa", 102, "8 X-Tudo, batata frita, nuggets, calabresa e molho especial.", "Combo família", IMG.comboCoringaMadrugadao),
+  combo("combo-madrugadao", "Combo Madrugadão", 125, "10 X-Tudo, batata frita, nuggets, calabresa e frango à passarinho.", "Combo família", IMG.comboCoringaMadrugadao),
 ];
 
 /* ------------------------------------------------------------------ */
@@ -441,7 +457,7 @@ const prensado = (
   description: `${
     opts.text ?? (opts.chooseCheese ? `${filling} com Catupiry ou Cheddar` : filling)
   }. Leva maionese, ketchup, milho, batata e cebola.`,
-  image: "",
+  image: IMG.prensados,
   emoji: "🌭",
   category: "prensados",
   variants: single(price),
@@ -487,12 +503,13 @@ const porcao = (
   price: number,
   description: string,
   section: string,
-  emoji = "🍟"
+  emoji = "🍟",
+  image = ""
 ): Product => ({
   id,
   name,
   description,
-  image: "",
+  image,
   emoji,
   category: "porcoes",
   section,
@@ -504,7 +521,7 @@ const porcoes: Product[] = [
     id: "aipim-frito",
     name: "Aipim Frito",
     description: "Porção de aipim frito. Escolha o acompanhamento.",
-    image: "",
+    image: IMG.aipim,
     emoji: "🍟",
     category: "porcoes",
     section: "Aipim frito",
@@ -516,9 +533,9 @@ const porcoes: Product[] = [
     ]),
   },
 
-  porcao("nuggets", "Nuggets (10 unidades)", 12, "10 nuggets de frango.", "Porções", "🍗"),
-  porcao("frango-passarinho", "Frango à Passarinho", 31, "Frango à passarinho com alho torrado.", "Porções", "🍗"),
-  porcao("costelinha", "Costelinha Suína", 41, "Porção de costelinha suína.", "Porções", "🍖"),
+  porcao("nuggets", "Nuggets (10 unidades)", 12, "10 nuggets de frango.", "Porções", "🍗", IMG.nuggets),
+  porcao("frango-passarinho", "Frango à Passarinho", 31, "Frango à passarinho com alho torrado.", "Porções", "🍗", IMG.frangoPassarinho),
+  porcao("costelinha", "Costelinha Suína", 41, "Porção de costelinha suína.", "Porções", "🍖", IMG.costelinha),
   porcao("carne-seca-batata", "Carne Seca com Batata", 39, "Carne seca com batata frita, cheddar e Catupiry.", "Porções", "🍖"),
   porcao("carne-seca-aipim", "Carne Seca com Aipim", 39, "Carne seca com aipim frito.", "Porções", "🍖"),
   porcao("isca-frango", "Isca de Frango", 39, "Isca de frango com alho torrado.", "Porções", "🍗"),
@@ -527,7 +544,7 @@ const porcoes: Product[] = [
     id: "batata-frita",
     name: "Batata Frita",
     description: "Batata frita crocante. Escolha o tamanho ou o acompanhamento.",
-    image: "",
+    image: IMG.batata,
     emoji: "🍟",
     category: "porcoes",
     section: "Batata frita",
@@ -546,7 +563,9 @@ const porcoes: Product[] = [
     "Batata Maluca (25 cm)",
     51,
     "Bacon, calabresa, frango à passarinho, azeitona, queijo ralado, alho torrado, cheddar e Catupiry.",
-    "Batata frita"
+    "Batata frita",
+    "🍟",
+    IMG.batataMaluca
   ),
 
   porcao(
@@ -555,7 +574,8 @@ const porcoes: Product[] = [
     72,
     "Batata frita, alho torrado, costelinha suína, nuggets, frango à passarinho, calabresa acebolada, molho especial, cheddar e Catupiry.",
     "Caixas de petisco",
-    "📦"
+    "📦",
+    IMG.caixaPetiscos
   ),
   porcao(
     "caixa-petisco-30",
@@ -563,7 +583,8 @@ const porcoes: Product[] = [
     98,
     "Aipim frito com carne seca, batata frita, alho torrado, costelinha suína, nuggets, frango à passarinho, calabresa acebolada, molho especial, queijo ralado, cheddar, Catupiry e azeitona.",
     "Caixas de petisco",
-    "📦"
+    "📦",
+    IMG.caixaPetiscos
   ),
 ];
 
@@ -685,7 +706,7 @@ const acai: Product[] = [
     id: "casquinha-2-bolas",
     name: "Casquinha com 2 Bolas",
     description: "Casquinha crocante com duas bolas de sorvete.",
-    image: "",
+    image: IMG.casquinhaPicoleBig,
     emoji: "🍦",
     category: "acai",
     variants: single(7),
@@ -695,7 +716,7 @@ const acai: Product[] = [
     id: "casquinha-nutella",
     name: "Casquinha Recheada com Nutella",
     description: "Casquinha recheada com Nutella.",
-    image: "",
+    image: IMG.casquinhaPicoleBig,
     emoji: "🍦",
     category: "acai",
     variants: single(8),
@@ -704,7 +725,7 @@ const acai: Product[] = [
     id: "picole-big",
     name: "Picolé Big",
     description: "Picolé grande. Escolha o sabor.",
-    image: "",
+    image: IMG.casquinhaPicoleBig,
     emoji: "🍧",
     category: "acai",
     section: "Picolés",
@@ -735,7 +756,7 @@ const acai: Product[] = [
     id: "picole-fruta",
     name: "Picolé da Fruta",
     description: "Picolé da fruta. Escolha o sabor.",
-    image: "",
+    image: IMG.picoleFruta,
     emoji: "🍓",
     category: "acai",
     section: "Picolés",

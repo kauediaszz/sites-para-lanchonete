@@ -22,10 +22,9 @@ export const storeConfig = {
   slogan: "A fome não dorme, a gente também não.",
 
   // 🔧 WhatsApp no formato internacional (55 + DDD + número), sem símbolos.
-  // (Hoje é o número de teste. Trocar pelo número da lanchonete depois.)
-  whatsapp: "5521990251700",
-  // Como o número aparece escrito no topo do site
-  phoneDisplay: "(21) 99025-1700",
+  whatsapp: "5521968551266",
+  // Como o número aparece escrito no site (só DDD + número)
+  phoneDisplay: "21 96855-1266",
 
   // Horário de funcionamento
   hours: {
