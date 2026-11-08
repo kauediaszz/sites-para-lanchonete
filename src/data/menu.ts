@@ -16,7 +16,7 @@
  * Pra adicionar um produto: copie um bloco parecido e troque o "id" (único).
  */
 
-export type Category = "lanches" | "combos" | "prensados" | "porcoes" | "acai";
+export type Category = "lanches" | "combos" | "prensados" | "porcoes" | "acai" | "bebidas";
 
 export interface Variant {
   id: string;
@@ -58,6 +58,7 @@ export const categories: { id: Category; label: string; emoji: string }[] = [
   { id: "prensados", label: "Prensados", emoji: "🌭" },
   { id: "porcoes", label: "Porções", emoji: "🍟" },
   { id: "acai", label: "Açaí e Sorvetes", emoji: "🍨" },
+  { id: "bebidas", label: "Bebidas", emoji: "🥤" },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -125,6 +126,10 @@ const IMG = {
   caixaPetiscos: "/menu/caixa-de-petiscos.webp",
   casquinhaPicoleBig: "/menu/casquinha-2-bolas-casquinha-recheada-e-picole-big.webp",
   picoleFruta: "/menu/picole-de-fruta.webp",
+  guaracamp: "/menu/guaracampmadrugadao.webp",
+  cocaLata: "/menu/cocalata-madrugadao.webp",
+  convencao: "/menu/convencao.webp",
+  cocaRetornavel: "/menu/coca-madrugadao.webp",
 };
 
 /* ------------------------------------------------------------------ */
@@ -791,6 +796,58 @@ const acai: Product[] = [
 ];
 
 /* ------------------------------------------------------------------ */
+/* BEBIDAS                                                             */
+/* ------------------------------------------------------------------ */
+
+const bebidas: Product[] = [
+  {
+    id: "guaracamp",
+    name: "Guaracamp",
+    description: "Guaraná Guaracamp.",
+    image: IMG.guaracamp,
+    emoji: "🥤",
+    category: "bebidas",
+    variants: single(2),
+  },
+  {
+    id: "coca-lata",
+    name: "Coca-Cola Lata",
+    description: "Coca-Cola em lata. Escolha normal ou zero.",
+    image: IMG.cocaLata,
+    emoji: "🥤",
+    category: "bebidas",
+    variants: single(7),
+    optionGroups: [
+      {
+        id: "tipo",
+        title: "Normal ou zero?",
+        type: "single",
+        required: true,
+        options: ["Normal", "Zero"],
+      },
+    ],
+  },
+  {
+    id: "convencao-2l",
+    name: "Convenção de Guaraná 2 L",
+    description: "Guaraná Convenção de 2 litros.",
+    image: IMG.convencao,
+    emoji: "🥤",
+    category: "bebidas",
+    variants: single(8),
+  },
+  {
+    id: "coca-retornavel",
+    name: "Coca-Cola Retornável",
+    description: "Coca-Cola retornável.",
+    image: IMG.cocaRetornavel,
+    emoji: "🥤",
+    category: "bebidas",
+    variants: single(10),
+  },
+];
+
+/* ------------------------------------------------------------------ */
 
 export const products: Product[] = [
   ...lanches,
@@ -798,4 +855,5 @@ export const products: Product[] = [
   ...prensados,
   ...porcoes,
   ...acai,
+  ...bebidas,
 ];
